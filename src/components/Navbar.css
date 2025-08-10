@@ -1,0 +1,90 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(230, 222, 222, 0.1); /* Transparent */
+  backdrop-filter: blur(1px);
+  z-index: 10;
+}
+
+.navbar-logo {
+  font-size: 1.8rem; /* Larger text */
+  font-weight: bold;
+  color: #000;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  margin-left: 690px;
+  padding: 0;
+  flex-grow: 1.5;             /* allows the link section to expand */
+  justify-content: center;   /* centers links in the available space */
+}
+
+.navbar-links li {
+  list-style: none;
+  margin-left: 50px;
+}
+
+/* ====== Original link style ====== */
+.navbar-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  transition: 0.3s;
+  margin-right: 2px;
+
+  /* Uiverse effect */
+  --primary-color: #000;
+  --hovered-color: #181313;
+  position: relative;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.navbar-links a::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.navbar-links a::before {
+  position: absolute;
+  content: attr(data-text); /* dynamic text from HTML */
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-links a:hover::before {
+  width: 100%;
+}
+
+.navbar-links a:hover {
+  color: var(--hovered-color);
+}
+
+.navbar-links a:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}

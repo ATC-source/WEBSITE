@@ -1,0 +1,95 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home-container {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px; /* for navbar space */
+}
+
+/* Logo */
+.club-logo {
+  width: 350px; /* Smaller logo */
+  height: auto;
+  margin-bottom: -35px;
+}
+
+/* Title */
+.club-title {
+  font-size: 2.2rem; /* Reduced size */
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+/* Tagline */
+.club-tagline {
+  font-size: 1.2rem;
+  color: #111;
+  margin-top: 8px;
+}
+
+/* Description */
+.club-description {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 15px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons */
+.home-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  background: #40403e;
+  border: none;
+  border-radius: 50px;
+  color: #f7f5f5;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  box-shadow: inset 0 0 0 4px #defc7c, 
+              inset 0 0 0 8px #ffd166, 
+              inset 0 0 0 12px #eafe64,
+              inset 0 0 0 16px #d3ee8f;
+  background: #073b4c;
+  color: #fff;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .club-title {
+    font-size: 1.8rem;
+  }
+  .club-tagline {
+    font-size: 1rem;
+  }
+  .club-description {
+    font-size: 0.85rem;
+  }
+  .home-buttons {
+    flex-direction: column;
+  }
+}
