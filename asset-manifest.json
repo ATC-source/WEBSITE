@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/WEBSITE/static/css/main.cff5ef98.css",
-    "main.js": "/WEBSITE/static/js/main.a25cef95.js",
+    "main.js": "/WEBSITE/static/js/main.072cd15e.js",
     "static/media/ATCbcg.jpg": "/WEBSITE/static/media/ATCbcg.ebd098fdea8d27e955da.jpg",
     "static/media/atc-logo.png": "/WEBSITE/static/media/atc-logo.fc8baf2700ec3fa4fa07.png",
     "index.html": "/WEBSITE/index.html",
     "main.cff5ef98.css.map": "/WEBSITE/static/css/main.cff5ef98.css.map",
-    "main.a25cef95.js.map": "/WEBSITE/static/js/main.a25cef95.js.map"
+    "main.072cd15e.js.map": "/WEBSITE/static/js/main.072cd15e.js.map"
   },
   "entrypoints": [
     "static/css/main.cff5ef98.css",
-    "static/js/main.a25cef95.js"
+    "static/js/main.072cd15e.js"
   ]
 }
