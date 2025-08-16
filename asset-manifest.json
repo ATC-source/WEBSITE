@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/WEBSITE/static/css/main.22b9ee6c.css",
-    "main.js": "/WEBSITE/static/js/main.b841ecc7.js",
-    "static/media/ATCbcg.jpg": "/WEBSITE/static/media/ATCbcg.ebd098fdea8d27e955da.jpg",
+    "main.css": "/WEBSITE/static/css/main.a7f77169.css",
+    "main.js": "/WEBSITE/static/js/main.926ad0d1.js",
     "static/media/5IMG.png": "/WEBSITE/static/media/5IMG.7a2a9377e3b9d4bcd55c.png",
     "static/media/4IMG.png": "/WEBSITE/static/media/4IMG.7ae879ae23e8f7d74d48.png",
     "static/media/1IMG.png": "/WEBSITE/static/media/1IMG.dfcfef5ac1fc7833de54.png",
@@ -11,11 +10,11 @@
     "static/media/6IMG.png": "/WEBSITE/static/media/6IMG.72b7675ac1d76718eeaf.png",
     "static/media/atc-logo.png": "/WEBSITE/static/media/atc-logo.fc8baf2700ec3fa4fa07.png",
     "index.html": "/WEBSITE/index.html",
-    "main.22b9ee6c.css.map": "/WEBSITE/static/css/main.22b9ee6c.css.map",
-    "main.b841ecc7.js.map": "/WEBSITE/static/js/main.b841ecc7.js.map"
+    "main.a7f77169.css.map": "/WEBSITE/static/css/main.a7f77169.css.map",
+    "main.926ad0d1.js.map": "/WEBSITE/static/js/main.926ad0d1.js.map"
   },
   "entrypoints": [
-    "static/css/main.22b9ee6c.css",
-    "static/js/main.b841ecc7.js"
+    "static/css/main.a7f77169.css",
+    "static/js/main.926ad0d1.js"
   ]
 }
