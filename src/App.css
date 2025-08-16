@@ -2,8 +2,20 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fffbea;
   color: #000;
+  width: 100%;
+  height: 100vh;
+
+  /* Gradient background */
+  background: repeating-linear-gradient(
+      -45deg,
+      orange,
+      orangered 10px,
+      orange 10px,
+      orangered 20px
+    ) orange;
+  background-blend-mode: screen;
+  background-attachment: fixed; /* keeps background fixed like wallpaper */
 }
 
 /* Navbar */
@@ -36,7 +48,7 @@ body {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: #fffbe0;
+  background: rgba(255, 251, 224, 0.8); /* slightly transparent to show bg */
 }
 
 .hero h1 {
@@ -61,7 +73,8 @@ body {
 /* About Section */
 .about {
   padding: 2rem;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9); /* slight transparency */
+  border-radius: 10px;
 }
 
 /* Objectives Page */
@@ -82,7 +95,7 @@ body {
 }
 
 .objective-card {
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   border: 2px solid #fff000;
   padding: 1rem;
   border-radius: 10px;

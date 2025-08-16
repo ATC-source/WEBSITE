@@ -1,0 +1,13 @@
+.page-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  margin: 0;
+  padding: 60px 20px;
+  text-align: center;
+}

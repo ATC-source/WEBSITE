@@ -1,15 +1,22 @@
 .objectives-container {
   min-height: 100vh;
-  background-image: url('../assets/ATCbcg.jpg'); /* same as home */
+  background: repeating-linear-gradient(
+      -45deg,
+      orange,
+      orangered 10px,
+      orange 10px,
+      rgb(71, 67, 67) 20px
+    )
+    rgb(239, 139, 57);
+  background-blend-mode: screen;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 100px 20px 60px;
   position: relative;
 }
 
-/* Light overlay for contrast */
+/* Overlay for depth */
 .objectives-container::before {
   content: "";
   position: fixed;
@@ -17,12 +24,71 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(1.5px);
   z-index: -1;
 }
 
-/* Objective section container */
+/* Creative Title */
+.objectives-title-container {
+  text-align: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: all 1s ease-out;
+  position: relative;
+}
+
+.objectives-title-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.objectives-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #080707;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  position: relative;
+  display: inline-block;
+}
+
+.highlight {
+  color: #d7f63f;
+  text-shadow: 2px 2px 12px rgba(18, 14, 10, 0.5);
+}
+
+/* Animated underline */
+.title-underline {
+  content: "";
+  display: block;
+  height: 6px;
+  width: 0;
+  background: linear-gradient(90deg, #0a0907, #e1711c, #121211);
+  border-radius: 4px;
+  margin-top: 6px;
+  animation: underline 2s ease-out forwards;
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.objectives-subtitle {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  margin-top: 0.5rem;
+  font-style: italic;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Base Objective styles */
 .objective {
   display: flex;
   align-items: center;
@@ -30,61 +96,80 @@
   gap: 40px;
   margin: 80px 0;
   opacity: 0;
-  transform: translateY(80px) scale(0.98) rotateX(12deg);
-  transform-origin: center top;
-  transition: transform 0.9s ease, opacity 0.9s ease;
+  transform: translateX(-120px);
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .objective.show {
   opacity: 1;
-  transform: translateY(0) scale(1) rotateX(0deg);
+  transform: translateX(0);
 }
 
 .objective.reverse {
   flex-direction: row-reverse;
+  transform: translateX(120px);
 }
 
-/* Image styling */
+.objective.reverse.show {
+  transform: translateX(0);
+}
+
+/* Image */
 .objective-img {
   width: 45%;
   max-width: 480px;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-  transition: transform 0.4s ease;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .objective-img:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* Glassmorphism text card */
+/* Text */
 .objective-text {
   width: 45%;
-  background: rgba(255, 255, 255, 0.82);
-  padding: 28px 32px;
-  border-radius: 14px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  padding: 30px 34px;
+  border-radius: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+  transition: transform 0.4s ease;
+}
+
+.objective-text:hover {
+  transform: translateY(-5px);
 }
 
 .objective-text h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 15px;
-  color: #111;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .objective-text p {
-  font-size: 1.05rem;
-  color: #333;
-  line-height: 1.65;
+  font-size: 1.1rem;
+  color: #f1f1f1;
+  line-height: 1.7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-/* Mobile responsiveness */
+/* Responsive */
 @media (max-width: 768px) {
   .objective {
     flex-direction: column !important;
     text-align: center;
-    gap: 20px;
+    gap: 25px;
+    transform: translateY(80px);
+  }
+
+  .objective.reverse {
+    flex-direction: column !important;
+    transform: translateY(80px);
   }
 
   .objective-img,

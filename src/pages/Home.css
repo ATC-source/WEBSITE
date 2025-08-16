@@ -1,95 +1,72 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-.home-container {
-  position: relative;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* src/pages/Home.css */
+.home-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
   text-align: center;
-  padding-top: 20px; /* for navbar space */
+  min-height: 100vh;
+  gap: 20px;
+  padding: 0 20px;
+  margin-top: -85px;
 }
 
 /* Logo */
 .club-logo {
-  width: 350px; /* Smaller logo */
+  width: 400px;
   height: auto;
-  margin-bottom: -35px;
+  margin-bottom: -60px;
 }
 
 /* Title */
 .club-title {
-  font-size: 2.2rem; /* Reduced size */
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 8px;
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: -30px;
 }
 
 /* Tagline */
 .club-tagline {
   font-size: 1.2rem;
-  color: #111;
-  margin-top: 8px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: -20px;
 }
 
 /* Description */
 .club-description {
-  font-size: 0.9rem;
-  color: #444;
-  margin-top: 15px;
-  max-width: 550px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 700px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 /* Buttons */
 .home-buttons {
-  margin-top: 20px;
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  gap: 20px;
 }
 
 .btn {
-  width: 150px;
+  width: 160px;
   height: 50px;
-  font-size: 18px;
-  background: #40403e;
+  font-size: 16px;
+  background: #0c0808;
   border: none;
   border-radius: 50px;
-  color: #f7f5f5;
+  color: #f0e7e7;
   outline: none;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all 0.4s;
 }
 
 .btn:hover {
-  box-shadow: inset 0 0 0 4px #defc7c, 
-              inset 0 0 0 8px #ffd166, 
-              inset 0 0 0 12px #eafe64,
-              inset 0 0 0 16px #d3ee8f;
+  box-shadow: inset 0 0 0 4px #241317,
+              inset 0 0 0 8px #e7f526,
+              inset 0 0 0 12px #b4f92c,
+              inset 0 0 0 16px #d8f664;
   background: #073b4c;
   color: #fff;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .club-title {
-    font-size: 1.8rem;
-  }
-  .club-tagline {
-    font-size: 1rem;
-  }
-  .club-description {
-    font-size: 0.85rem;
-  }
-  .home-buttons {
-    flex-direction: column;
-  }
 }
