@@ -1,16 +1,16 @@
 /* src/Global.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
 /* Shared background for all pages */
 .page-background {
   min-height: 100vh;
   background: repeating-linear-gradient(
       -45deg,
-      orange,
-      orangered 10px,
-      orange 10px,
-      rgb(71, 67, 67) 20px
+      rgb(239, 239, 235),
+      hsl(63, 93%, 63%) 5px,
+      rgb(240, 248, 12) 5px,
+      rgb(22, 18, 18) 8px
     )
-    rgb(239, 139, 57);
+    rgb(244, 234, 53);
   background-blend-mode: screen;
 
   background-size: cover;
@@ -36,4 +36,12 @@
 }
 html {
   scroll-behavior: smooth;
+}
+* {
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

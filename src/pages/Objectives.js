@@ -39,7 +39,7 @@ export default function Objectives() {
   }, []);
 
   return (
-    <div className="objectives-container" id="objectives">
+    <div className="page-background" id="objectives">
       {/* Creative Title */}
       <div className="objectives-title-container" ref={(el) => (refs.current[0] = el)}>
         <h1 className="objectives-title">

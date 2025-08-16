@@ -1,20 +1,4 @@
-.objectives-container {
-  min-height: 100vh;
-  background: repeating-linear-gradient(
-      -45deg,
-      orange,
-      orangered 10px,
-      orange 10px,
-      rgb(71, 67, 67) 20px
-    )
-    rgb(239, 139, 57);
-  background-blend-mode: screen;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 100px 20px 60px;
-  position: relative;
-}
+
 
 /* Overlay for depth */
 .objectives-container::before {
@@ -55,7 +39,7 @@
 }
 
 .highlight {
-  color: #d7f63f;
+  color: #0d0d0b;
   text-shadow: 2px 2px 12px rgba(18, 14, 10, 0.5);
 }
 
@@ -82,7 +66,7 @@
 
 .objectives-subtitle {
   font-size: 1.2rem;
-  color: #f1f1f1;
+  color: #0b0303;
   margin-top: 0.5rem;
   font-style: italic;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
@@ -146,14 +130,14 @@
 .objective-text h2 {
   font-size: 2rem;
   margin-bottom: 15px;
-  color: #fff;
+  color: #1d1010;
   font-weight: bold;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .objective-text p {
   font-size: 1.1rem;
-  color: #f1f1f1;
+  color: #0e0808;
   line-height: 1.7;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
