@@ -132,14 +132,12 @@
   margin-bottom: 15px;
   color: #1d1010;
   font-weight: bold;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 .objective-text p {
   font-size: 1.1rem;
   color: #0e0808;
   line-height: 1.7;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Responsive */
