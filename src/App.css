@@ -6,16 +6,42 @@ body {
   width: 100%;
   height: 100vh;
 
-  /* Gradient background */
+  /* New dark pattern background */
   background: repeating-linear-gradient(
-      -45deg,
-      orange,
-      orangered 10px,
-      orange 10px,
-      orangered 20px
-    ) orange;
-  background-blend-mode: screen;
-  background-attachment: fixed; /* keeps background fixed like wallpaper */
+    135deg,
+    #232526 0px,
+    #232526 60px,
+    #23252699 70px,
+    #414345 130px
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated cube overlay */
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  left: -30%;
+  top: -20%;
+  background: transparent;
+  opacity: 0.7;
+  z-index: 0;
+  animation: cubeMove 18s linear infinite alternate;
+}
+
+/* Keep the animation */
+@keyframes cubeMove {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-20%) scale(1.02) rotate(1deg);
+  }
 }
 
 /* Navbar */
@@ -25,6 +51,8 @@ body {
   align-items: center;
   background: #fff000;
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -48,7 +76,9 @@ body {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: rgba(255, 251, 224, 0.8); /* slightly transparent to show bg */
+  background: rgba(255, 251, 224, 0.85); /* transparent layer for readability */
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -73,13 +103,17 @@ body {
 /* About Section */
 .about {
   padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.9); /* slight transparency */
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Objectives Page */
 .objectives-page {
   padding: 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .objectives-page h2 {
